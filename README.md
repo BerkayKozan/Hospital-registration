@@ -15,7 +15,7 @@ In a different terminal window run client:
 ./gradlew :client:bootRun
 ```
 
-Visit http://localhost:8082/ to see the result.
+Visit http://localhost:8082/<endpoint> to see a result.
 
 ### Endpoints
 There are several endpoints you can use in this project. The endpoints used can be found at com/berkay/client/GrpcClientController.java. 
