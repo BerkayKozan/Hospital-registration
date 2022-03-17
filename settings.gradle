@@ -1,0 +1,10 @@
+rootProject.name = 'hospital-registration'
+include "grpc-lib"
+include "client"
+include "server"
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.berkay.grpc.lib";
+option java_outer_classname = "HospitalProto";
+
+// The greeting service definition.
+service HospitalService {
+
+    rpc CreateHospital (HospitalCreateRequest) returns (HospitalReply) {}
+    rpc GetHospital (HospitalRequest) returns (HospitalReply){}
+    rpc GetAllHospital (EmptyRequest) returns (HospitalReply) {}
+    rpc ModifyHospital (HospitalModifyRequest) returns (HospitalReply){}
+    rpc DeleteHospital (HospitalRequest) returns (HospitalReply) {}
+    rpc DeleteAllHospital (EmptyRequest) returns (HospitalReply) {}
+    rpc GetPatientsOfHospital (HospitalRequest) returns (HospitalReply) {}
+    rpc AddPatientToHospital (HospitalPatientRequest) returns (HospitalReply) {}
+
+}
+
+message EmptyRequest{
+}
+
+message HospitalCreateRequest {
+    string name = 1;
+}
+message HospitalRequest {
+    string name = 1;
+}
+message HospitalModifyRequest {
+    string old_name = 1;
+    string new_name = 2;
+}
+
+message HospitalPatientRequest{
+    string patient = 1;
+    string hospital = 2;
+}
+// The response message containing the greetings
+message HospitalReply {
+    string message = 1;
+}
