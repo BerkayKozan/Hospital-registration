@@ -2,6 +2,7 @@ package com.berkay.server;
 
 import com.berkay.grpc.lib.HospitalCreateRequest;
 import com.berkay.grpc.lib.HospitalReply;
+import com.berkay.grpc.lib.HospitalRequest;
 import com.berkay.server.HospitalServerService;
 import com.berkay.server.repository.HospitalRepository;
 import io.grpc.internal.testing.StreamRecorder;
@@ -43,5 +44,6 @@ public class HospitalServerServiceTest {
                 .setMessage("Hospital created with name: Klinikum")
                 .build(), response);
     }
+
 
 }

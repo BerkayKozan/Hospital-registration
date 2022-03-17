@@ -12,6 +12,11 @@ public class GrpcClientController {
     @Autowired
     private GrpcClientService grpcClientService;
 
+    @RequestMapping(value = "/")
+    public String printMessage0() {
+        return grpcClientService.starter();
+    }
+
     @RequestMapping(value = "/createHospital", method = RequestMethod.POST)
     public String printMessage(@RequestParam(defaultValue = "Klinikum") String name) {
         return grpcClientService.createHospital(name);

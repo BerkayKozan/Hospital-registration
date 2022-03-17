@@ -146,4 +146,9 @@ public class GrpcClientService {
         }
     }
 
+    public String starter() {
+        final String resp1= getAllPatient();
+        final String resp2= getAllHospital();
+        return resp1 + System.lineSeparator() + resp2;
+    }
 }
