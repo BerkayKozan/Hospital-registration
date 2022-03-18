@@ -20,7 +20,14 @@ public class PatientServerService extends PatientServiceGrpc.PatientServiceImplB
     private HospitalRepository hospitalRepository;
     @Autowired
     private PatientRepository patientRepository;
-
+    @Autowired
+    public void setHospitalRepository(HospitalRepository hospitalRepository) {
+        this.hospitalRepository = hospitalRepository;
+    }
+    @Autowired
+    public void setPatientRepository(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
+    }
     @Override
     public void createPatient(PatientCreateRequest req, StreamObserver<PatientReply> responseObserver) {
         Patient patient = new Patient();

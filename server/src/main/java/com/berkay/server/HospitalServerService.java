@@ -24,6 +24,10 @@ public class HospitalServerService extends HospitalServiceGrpc.HospitalServiceIm
     public void setHospitalRepository(HospitalRepository hospitalRepository) {
         this.hospitalRepository = hospitalRepository;
     }
+    @Autowired
+    public void setPatientRepository(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
+    }
 
     @Override
     public void createHospital(HospitalCreateRequest req, StreamObserver<HospitalReply> responseObserver) {
