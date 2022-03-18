@@ -22,4 +22,4 @@ There are several endpoints you can use in this project. The endpoints used can 
 
 ### Testing
 
-For testing, I used Unit tests. There is only test for creating a hospital, since I didn't have enough time.
+For testing, I used Unit tests. You can simply run the tests.
